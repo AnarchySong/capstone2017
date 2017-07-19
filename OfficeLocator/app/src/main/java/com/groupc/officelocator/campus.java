@@ -13,6 +13,7 @@ public class campus extends AppCompatActivity {
     //Buttons for just 2 buildings
     public int numberBuildings = 2; //16 total;
     public Button miaHamm, tigerWoods, search;
+    public Button roomFirstSearch;
 
     Button[] arrayButtons = {miaHamm, tigerWoods};//, danFouts, tigerWoods, nolanRyan1};
     int[] buttonNames = {R.id.mh1, R.id.tw1};// R.id.df1, R.id.tw1, R.id.nr1};
@@ -58,6 +59,13 @@ public class campus extends AppCompatActivity {
                                   }
 
         );
+        roomFirstSearch = (Button)findViewById(R.id.roomfirstsearch);
+        roomFirstSearch.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent theintent = new Intent(campus.this, roomsearch.class);
+                startActivity(theintent);
+            }
+        });
 
     }
 }
