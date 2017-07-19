@@ -55,9 +55,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/white"
         android:textSize="10sp"
-        android:layout_marginBottom="28dp"
-        android:layout_above="@+id/searchbutton"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBaseline="@+id/searchbutton"
+        android:layout_alignBottom="@+id/searchbutton"
+        android:layout_alignLeft="@+id/tw1"
+        android:layout_alignStart="@+id/tw1" />
 
     <Button
         android:id="@+id/tw1"
