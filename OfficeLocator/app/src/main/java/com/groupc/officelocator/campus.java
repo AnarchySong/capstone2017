@@ -25,7 +25,9 @@ public class campus extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        if(actionBar!=null) {
+            actionBar.hide();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_campus);
 
@@ -61,11 +63,15 @@ public class campus extends AppCompatActivity {
         );
         roomFirstSearch = (Button)findViewById(R.id.roomfirstsearch);
         roomFirstSearch.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent theintent = new Intent(campus.this, roomsearch.class);
-                startActivity(theintent);
-            }
-        });
+
+                                      public void onClick(View v){
+                                          Intent theintent = new Intent(campus.this, roomSearchMaster.class);
+                                          startActivity(theintent);
+                                      }
+
+                                  }
+
+        );
 
     }
 }

@@ -29,7 +29,9 @@ public class roomsearch extends mapstorage {
         final String[] rooms = campusMap.get(building);
 
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        if(actionBar!=null) {
+            actionBar.hide();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roomsearch);
 
