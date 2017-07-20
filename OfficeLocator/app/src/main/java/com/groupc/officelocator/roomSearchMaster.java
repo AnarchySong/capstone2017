@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 import java.util.Map;
 
 public class roomSearchMaster extends mapstorage {
@@ -17,7 +19,13 @@ public class roomSearchMaster extends mapstorage {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final String[] rooms = {"banana","squid"};//campusMap.keySet().toArray(new String[campusMap.size()]);
+        final String[] buildingList = campusMap.keySet().toArray(new String[campusMap.size()]);
+        final String[] rooms = {"test","test2"};//campusMap.values().toArray(new String[0]);
+        /*final ArrayList<String[]> room = new ArrayList<>();
+        for(int i = 0; i < buildingList.length; ++i){
+            room.add(campusMap.get(buildingList[i]));
+        }*/
+
         //for(int i = 0; i < campusMap.size(); ++i){
         //rooms = campusMap.keySet().toArray(new String[campusMap.size()]);
         //}
